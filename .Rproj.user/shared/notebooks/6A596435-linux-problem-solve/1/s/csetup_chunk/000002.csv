@@ -1,0 +1,7 @@
+"0","knitr::opts_chunk$set("
+"0","  eval = FALSE,"
+"0","	echo = TRUE,"
+"0","	message = FALSE,"
+"0","	warning = FALSE"
+"0",")"
+"0","Sys.setenv(PATH=paste(""/home/ghy/anaconda3/bin"",Sys.getenv(""PATH""), sep="":""))"

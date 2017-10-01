@@ -1,0 +1,38 @@
+]0;/media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve]0;ghy@jared: /media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve[01;32mghy@jared[00m:[01;34m/media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve[00m$ [K]0;ghy@jared: /media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve[01;32mghy@jared[00m:[01;34m/media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve[00m$ cat --help
+Usage: cat [OPTION]... [FILE]...
+Concatenate FILE(s) to standard output.
+
+With no FILE, or when FILE is -, read standard input.
+
+  -A, --show-all           equivalent to -vET
+  -b, --number-nonblank    number nonempty output lines, overrides -n
+  -e                       equivalent to -vE
+  -E, --show-ends          display $ at end of each line
+  -n, --number             number all output lines
+  -s, --squeeze-blank      suppress repeated empty output lines
+  -t                       equivalent to -vT
+  -T, --show-tabs          display TAB characters as ^I
+  -u                       (ignored)
+  -v, --show-nonprinting   use ^ and M- notation, except for LFD and TAB
+      --help     display this help and exit
+      --version  output version information and exit
+
+Examples:
+  cat f - g  Output f's contents, then standard input, then g's contents.
+  cat        Copy standard input to standard output.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/cat>
+or available locally via: info '(coreutils) cat invocation'
+]0;/media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve]0;ghy@jared: /media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve[01;32mghy@jared[00m:[01;34m/media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve[00m$ echo 123|sudo -S mount /dev/sda6 /home/gh y/E
+[sudo] password for ghy: Mount is denied because the NTFS volume is already exclusively opened.
+The volume may be already mounted, or another software may use it which
+could be identified for example by the help of the 'fuser' command.
+]0;/media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve]0;ghy@jared: /media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve[01;32mghy@jared[00m:[01;34m/media/ghy/36D2072ED206F243/5-project-age/linux-problem-solve[00m$ echo 123|sudo -S mount /dev/sda6 /home/ghy/E
+]0;/home/ghy/E/5-project-age/linux-problem-solve]0;ghy@jared: ~/E/5-project-age/linux-problem-solve[01;32mghy@jared[00m:[01;34m~/E/5-project-age/linux-problem-solve[00m$ echo 123|sudo -S mount /dev/sda6 /home/ghy/E
+[sudo] password for ghy: Mount is denied because the NTFS volume is already exclusively opened.
+The volume may be already mounted, or another software may use it which
+could be identified for example by the help of the 'fuser' command.
+]0;/home/ghy/E/5-project-age/linux-problem-solve]0;ghy@jared: ~/E/5-project-age/linux-problem-solve[01;32mghy@jared[00m:[01;34m~/E/5-project-age/linux-problem-solve[00m$ ginit[K[K[Kt init
+Initialized empty Git repository in /home/ghy/E/5-project-age/linux-problem-solve/.git/
+]0;/home/ghy/E/5-project-age/linux-problem-solve]0;ghy@jared: ~/E/5-project-age/linux-problem-solve[01;32mghy@jared[00m:[01;34m~/E/5-project-age/linux-problem-solve[00m$ git add .

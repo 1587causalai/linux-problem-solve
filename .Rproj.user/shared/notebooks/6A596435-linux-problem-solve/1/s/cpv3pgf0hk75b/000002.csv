@@ -1,0 +1,14 @@
+"0","pwd
+echo ""#!/bin/bash"" > scripts/gong-start.sh
+echo ""echo \""hello, Jared! You are the Best!\"""" >> scripts/gong-start.sh
+# echo ""hello"" | tee scripts/gong-start.sh
+echo ""echo 123|sudo -S mount /dev/sda6 /home/ghy/E"" >> scripts/gong-start.sh
+chmod +x scripts/gong-start.sh
+scripts/gong-start.sh"
+"1","/home/ghy/E/5-project-age/linux-problem-solve
+hello, Jared! You are the Best!
+"
+"2","[sudo] password for ghy: Mount is denied because the NTFS volume is already exclusively opened.
+The volume may be already mounted, or another software may use it which
+could be identified for example by the help of the 'fuser' command.
+"

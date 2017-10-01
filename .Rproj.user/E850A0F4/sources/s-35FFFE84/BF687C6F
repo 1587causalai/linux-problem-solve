@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1506794539610.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3467905035",
+    "id" : "BF687C6F",
+    "lastKnownWriteTime" : 1506796578,
+    "last_content_update" : 1506796578,
+    "path" : "~/E/5-project-age/linux-problem-solve/scripts/gong-start.sh",
+    "project_path" : "scripts/gong-start.sh",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "sh"
+}

@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1506478546589.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "919947709",
+    "id" : "6BE1D96C",
+    "lastKnownWriteTime" : 1506527609,
+    "last_content_update" : 1506527609848,
+    "path" : "~/projects/linux-problem-solve/linux-problem-solve.Rmd",
+    "project_path" : "linux-problem-solve.Rmd",
+    "properties" : {
+        "cursorPosition" : "99,26",
+        "docOutlineVisible" : "1",
+        "scrollLine" : "69",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

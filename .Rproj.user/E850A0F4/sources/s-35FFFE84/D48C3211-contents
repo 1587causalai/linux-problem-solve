@@ -1,0 +1,16 @@
+#!/bin/bash
+echo 'hello world'
+echo '规律的回顾能够克服我最大的缺点--缺乏带来的浮躁'
+echo '是什么，有什么用，怎么用?'
+
+## 如何通过运行一个脚本自动挂载如下分区呢？
+
+# 我在尝试用一个脚本文件挂载磁盘
+# 没有成功，原因如下
+# 在/media/ghy/中无法创建挂在文件夹，通过查找资料得知。
+# 即当插入一个windows分区格式的硬盘或者U盘时，linux系统自己主动挂载该移动硬盘到/media文件夹下
+# sudo mount /dev/sda5 /media/ghy/FC54FA0354F9C086
+echo 123|sudo -S mount /dev/sda6 /home/ghy/test
+# sudo mount /dev/sda7 /media/ghy/DED80E52D80E297B
+gedit ~/task
+gedit ~/focus

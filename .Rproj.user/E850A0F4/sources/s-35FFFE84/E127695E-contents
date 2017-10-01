@@ -1,0 +1,225 @@
+---
+title: "Linux Problem Solve"
+author: "Heyang Gong"
+date: "September 27, 2017"
+output: html_document
+---
+
+```{r setup,eval=TRUE, echo=FALSE, warning=FALSE,message=FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE,
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+Sys.setenv(PATH=paste("/home/ghy/anaconda3/bin",Sys.getenv("PATH"), sep=":"))
+```
+
+
+
+> Problem describe
+
+我只有一个空白桌面了，任务栏，状态栏，甚至登陆界面都没有了。
+
+
+# SUMMARY
+
+It is a great thing to have a problem. I can learn from solving the problem. When I'm trying to solve some problems, for example, `apt-get update doesn't work', there are something I must keep in mind:
+
+- First, calm down, write down the problem in the corresponding project, and get back to what you're doing as soon as possible.
+- Second, you can have a quick start of solving the problem, 
+    - google it
+    - read the official mannual or help of the problem
+- Third, digging into the problem,
+    - Thinking about asking youself something questions, doing some tests about the problem, trying to understand the essential of the problem.
+    - go over and over the precedent steps, write down the knowledges you have learned from the solving the problem.
+    
+    
+# Part I: sep 27, 24hous to solve.
+
+
+baidu "ubuntu 图形界面" 确认并不是没有切换到图形界面。
+
+ 最简单的切换方法，利用快捷键来切换：从图形化界面切换到命令行模式，我们可以通过按ALT+CTRL+F1、-----、F6，为什么是F1、-----、F6，因为在Linux中一般有F1到F6多个命令行字符终端，也就是说我们可以同时打开最多6个命令行界面。
+ 
+google "ubuntu 图形界面 空桌面"  --> 并没有解决  
+google "Ubuntu blank desktop", 我不认没有是Fix compiz problem的问题  
+
+google "Ubuntu system upgrade" 想重装系统解决， 但是感觉也不好安装。。。再去试试
+
+--> 重新安装系统吧
+
+- 系统升级
+- 系统恢复
+
+ 
+ 
+## 解决思路
+
+先备份重要文件吧。 
+
+ 
+### 恢复系统
+ 
+可以尝试去恢复系统。
+
+ubuntu recovery mode: If your system fails to boot for whatever reason, it may be useful to boot it into recovery mode. This mode just loads some basic services and drops you into command line mode. You are then logged in as root (the superuser) and can repair your system using command line tools. 
+
+
+### 重新安装系统
+
+baidu "u盘启动盘 ubuntu"
+
+
+```{bash}
+python --version
+```
+
+
+steps
+
+```
+1. download the iso file
+
+
+grub rescue
+
+grub它是一个多重操作系统启动管理器，用来引导不同系统。
+```
+
+在救援模式下，只有很少的命令可是使用：
+set 设置环境变量
+ls 查看设备
+insmod 加载模块
+root 指定用于启动系统的分区
+prefix 设定grub启动路径
+
+
+
+
+
+
+
+
+
+
+
+## 安装软件
+
+浏览器，python, Rstudio(R, R packages), anaconda, lantern,
+
+
+sudo apt-get update 不能更新？
+
+
+
+## 问题
+
+1. apt/source.list 是什么？
+
+2. sudo apt-get update 作用？
+
+
+### 问题来源
+
+我有次卸载了 python 2.7， 然后这是所有问题的根源。导致 apt-get 几乎不能安装任何东西。
+
+
+- 登陆的桌面和 recovery mode 下是一致的。
+- 
+
+
+### ubuntu 还原系统
+
+### 问题分析
+
+google "apt-get can't install anything"
+
+测试了如下代码， 似乎是网路原因。
+wget http://mirrors.hust.edu.cn/ubuntu/dists/wily/main/binary-amd64/Packages.bz2
+
+做了很多其他测试，发下用这个命令下载不了任何东西。用浏览器可以下载文件。
+
+
+# Part II: Bash Shell programming
+
+## Start with a question
+
+A question to be solved: 
+
+> How to create a excutable .sh file, make it excutable in everywhere like programs such as python, give it a nice name, e.g. gong.start?
+
+```{r}
+dir.create("scripts")
+file.create("scripts/gong-start.sh")
+```
+
+```{bash}
+pwd
+echo "#!/bin/bash" > scripts/gong-start.sh
+echo "echo \"hello, Jared! You are the Best!\"" >> scripts/gong-start.sh
+# echo "hello" | tee scripts/gong-start.sh
+echo "echo 123|sudo -S mount /dev/sda6 /home/ghy/E" >> scripts/gong-start.sh
+chmod +x scripts/gong-start.sh
+# scripts/gong-start.sh
+```
+
+
+
+
+
+
+
+## Bash Programming
+
+1.运用一条命令来创建并进入目录 
+创建接着进入一个新目录是一个非常普通的任务，似乎在shell中执行两种命令都该有捷径。虽然没有捷径，你可以将以下函数添加到你的。bashrc文件：
+
+```
+mkcd()
+{
+mkdir $1
+cd $1
+}
+```
+接着运行源 .bashrc 来读取内存中的变化，并运用mkcd命令完成两个服务：
+
+```
+linuxde@ubuntu:~$ mkcd articles 
+linuxde@ubuntu:~/articles $
+```
+
+
+2 `!n` 编号为n的历史命令, 不用再复制粘贴，或者照着历史记录敲了。执行历史命令记录里面的某个命令，只需要 ! + 这条命令记录前的序号. !!  上一条命令. !keyword 查找包含该keyword的历史命令. Ctrl + R  反向查找命令. history | grep keyword  列出所有符合条件的命令. history | grep keyword  列出所有符合条件的命令. 
+
+
+### Bash shell 编程入门
+
+```{r}
+setwd(dir = "/home/ghy")
+getwd()
+dir()
+## 居然没有作用 ---> It works
+```
+
+```{r}
+file.edit("scripts/hello.sh")
+
+```
+
+
+
+```{bash, eval = T}
+pwd
+chmod +x scripts/hello.sh
+
+# or we could do this 
+chmod 777 scripts/hello.sh
+scripts/hello.sh
+```
+
+
+
+
+
+
